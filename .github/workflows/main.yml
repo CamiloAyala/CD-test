@@ -50,4 +50,4 @@ jobs:
           PASSPHRASE: ${{ secrets.PASSPHRASE}}
         with:
           source: "*"
-          target: "/var/www/html"
+          target: "~/"

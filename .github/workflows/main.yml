@@ -39,6 +39,6 @@ jobs:
         with:
           source: "welcome.html"
           target: "/var/www/html"
-        script: |
-          whoami
-          ls -al
+          script: |
+            whoami
+            ls -al

@@ -37,5 +37,8 @@ jobs:
           KEY: ${{ secrets.KEY}}
           PASSPHRASE: ${{ secrets.PASSPHRASE}}
         with:
-          source: "*"
+          source: "welcome.html"
           target: "/var/www/html"
+        script: |
+          whoami
+          ls -al

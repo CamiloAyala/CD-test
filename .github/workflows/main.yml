@@ -37,8 +37,16 @@ jobs:
           KEY: ${{ secrets.KEY}}
           PASSPHRASE: ${{ secrets.PASSPHRASE}}
         with:
-          source: "welcome.html"
+          source: "."
           target: "/var/www/html"
+      - name: multiple command
+        uses: appleboy/ssh-action@master
+        with:
+          HOST: ${{ secrets.HOST}}
+          USERNAME: ${{ secrets.USERNAME}}
+          PORT: 22
+          KEY: ${{ secrets.KEY}}
+          PASSPHRASE: ${{ secrets.PASSPHRASE}}
           script: |
             whoami
             ls -al
